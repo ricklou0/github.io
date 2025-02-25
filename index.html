@@ -9,16 +9,34 @@
             max-width: 100%;
             height: auto;
         }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+        }
     </style>
 </head>
 <body>
     <h1>GS건설 안전관련 사항 접수 사이트</h1>
     <p>채팅 또는 영상통화를 선택해주세요</p>
+    
     <!-- 이미지 추가 -->
-    <img src="https://github.com/user-attachments/assets/7b9c02de-bce9-4522-8909-fc4e272934f3" alt="GS건설 안전 관련 이미지" />
+    <img src="https://example.com/your-image.jpg" alt="GS건설 안전 관련 이미지" />
+    
+    <!-- 버튼 추가 -->
+    <button id="chatButton">채팅 시작</button>
+    <button id="videoButton">영상통화 시작</button>
 
     <!-- Zoom SDK 스크립트 -->
-    <script data-chat-entry-id="rBQpEm8CSgKQ0YKExnghfw" data-env="us01" data-apikey="lAT-suQ1QaKraed7JcmWXw" src="https://us01ccistatic.zoom.us/us01cci/web-sdk/chat-client.js"></script>
-    <script data-entry-id="QclW44-GSaGCS3PflGLPqQ" data-env="us01" data-apikey="lAT-suQ1QaKraed7JcmWXw" src="https://us01ccistatic.zoom.us/us01cci/web-sdk/video-client.js"></script>
+    <script data-chat-entry-id="rBQpEm8CSgKQ0YKExnghfw" data-env="us01" data-apikey="YOUR_API_KEY" src="https://us01ccistatic.zoom.us/us01cci/web-sdk/chat-client.js"></script>
+    <script data-entry-id="QclW44-GSaGCS3PflGLPqQ" data-env="us01" data-apikey="YOUR_API_KEY" src="https://us01ccistatic.zoom.us/us01cci/web-sdk/video-client.js"></script>
+
+    <script>
+        ZoomMtg.preLoadWasm();
+        ZoomMtg.prepareJssdk();
+
+        // 추가적인 Zoom SDK 초기화 코드 또는 버튼 클릭 이벤트 처리
+    </script>
 </body>
 </html>
