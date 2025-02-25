@@ -22,21 +22,31 @@
     <p>채팅 또는 영상통화를 선택해주세요</p>
     
     <!-- 이미지 추가 -->
-    <img src="https://github.com/user-attachments/assets/7b9c02de-bce9-4522-8909-fc4e272934f3" alt="GS건설 안전 관련 이미지" />
+    <img src="https://example.com/your-image.jpg" alt="GS건설 안전 관련 이미지" />
     
     <!-- 버튼 추가 -->
     <button id="chatButton">채팅 시작</button>
     <button id="videoButton">영상통화 시작</button>
 
-    <!-- Zoom SDK 스크립트 -->
-    <script data-chat-entry-id="rBQpEm8CSgKQ0YKExnghfw" data-env="us01" data-apikey="lAT-suQ1QaKraed7JcmWXw" src="https://us01ccistatic.zoom.us/us01cci/web-sdk/chat-client.js"></script>
-    <script data-entry-id="QclW44-GSaGCS3PflGLPqQ" data-env="us01" data-apikey="lAT-suQ1QaKraed7JcmWXw" src="https://us01ccistatic.zoom.us/us01cci/web-sdk/video-client.js"></script>
+    <!-- Zoom SDK 스크립트 (한 번만 로드) -->
+    <script src="https://source.zoom.us/zoom-meeting-1.9.7.min.js"></script>
 
     <script>
+        // Zoom SDK 초기화
         ZoomMtg.preLoadWasm();
         ZoomMtg.prepareJssdk();
 
-        // 추가적인 Zoom SDK 초기화 코드 또는 버튼 클릭 이벤트 처리
+        // 채팅 버튼 클릭 시 채팅 관련 기능 실행
+        document.getElementById('chatButton').addEventListener('click', function() {
+            console.log("채팅 기능 시작");
+            // 채팅 관련 초기화 코드 추가
+        });
+
+        // 영상통화 버튼 클릭 시 영상통화 관련 기능 실행
+        document.getElementById('videoButton').addEventListener('click', function() {
+            console.log("영상통화 기능 시작");
+            // 영상통화 관련 초기화 코드 추가
+        });
     </script>
 </body>
 </html>
